@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main: #2B5D5E;
+  --sub1: #9CA472;
+  --sub2: #B8C926;
+  --sub3: #8CCFC8;
+  --sub4: #8EB3AB;
+  --sub6: #F9F9F6;
+  --sub10: #cccccc;
+  --sub11: #ffffff;
+  --sub12: #3c3c3c;
+}
+
+/* メディアクエリ */
+@media (max-width: 1110px) {
+  .flex-col.md\:flex-row {
+    flex-direction: column !important;
+  }
+}
+
+body {
+  background-color: var(--sub6);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+main {
+  padding-top:60px;
+  z-index: 1;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--sub6);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.btn-primary {
+  background-color: var(--main);
+  color: var(--sub11);
+  border-radius: 10px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.btn-primary:hover {
+  background-color: var(--sub3);
+  color: var(--main);
+  border-radius: 10px;
+}
+
+.btn-primary:focus {
+  box-shadow: none;
+}
+
+
+.btn.btn-secondary {
+  border-radius: 10px;
+  outline-color: none!important;
+  --tw-text-opacity: 0 !important;
+  --btn-color:var(--main);
+}
+
+.btn.btn-secondary:hover {
+  border-radius: 10px;
+}
+
+.btn.btn-secondary:focus {
+  box-shadow: none !important;
+}
+
+
+.btn-natural {
+  display: inline-block;
+  border-top: 1px solid var(--sub12);
+  border-bottom: 1px solid var(--sub12);
+  background-color: var(--sub6);
+  color: var(--sub12);
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 15px 4px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-natural:hover {
+  background-color: var(--sub3);
+  color: var(--main);
+  border-color: var(--main); 
+}
+
+.btn-natural:focus {
+  outline: none;
+}
+
+
+.step {
+  color: var(--main);
+  font-weight: bold;
+  padding-top: 2px;
+  font-size: 10pt;
+}
+
+.step.step-accent::after {
+  background-color: var(--sub3);
+  content: '';
+}
+
+.step.step-accent::before {
+  background-color: var(--sub3)!important;
+  content: '';
+}
+
+.BarChart canvas {
+  float: right;
+}
+
+
+.btn-mouseover:hover + .mouseover_box {
+  display: block;
+  margin-top: 5px;
+}
+
+.mouseover_box {
+  display: none;
+  position: absolute;
+  top:120%;
+  left:auto;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: justify;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+/* 追加 */
+.title {
+  position: relative;
+}
